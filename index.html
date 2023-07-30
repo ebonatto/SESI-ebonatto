@@ -6,55 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/main.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="./js/nav.js" defer></script>
     <title>SESI</title>
 </head>
 
 <body>
-    <header>
-        <img src="" alt="Logo SESI">
-
+    <header class="header">
+        <img src="./assets/SESI.svg" alt="Logo SESI" class="logo">
         <button class="mob-menu-toggle" aria-expanded="false">
-            <svg class="hamburger" viewBox="0 0 100 100" width="250">
-                <rect class="hamburger-line hamburger-top" width="80" height="10" x="10" y="25" rx="5"></rect>
-                <rect class="hamburger-line hamburger-mid" width="80" height="10" x="10" y="45" rx="5"></rect>
-                <rect class="hamburger-line hamburger-bot" width="80" height="10" x="10" y="65" rx="5"></rect>
+            <svg class="hamburger" viewBox="0 0 100 100" width="40">
+                <rect class="hamburger-line hamburger-top" width="80" height="8" x="10" y="26" rx="4"></rect>
+                <rect class="hamburger-line hamburger-mid" width="80" height="8" x="10" y="46" rx="4"></rect>
+                <rect class="hamburger-line hamburger-bot" width="80" height="8" x="10" y="66" rx="4"></rect>
             </svg>
         </button>
-
-        <nav>
+        <nav class="header-nav" data-visible="false">
             <ul>
-                <li>Menu 1</li>
-                <li>Menu 2</li>
-                <li>Menu 3</li>
-                <li>Menu 4</li>
+                <li><a href="#menu1">Menu 1</a></li>
+                <li><a href="#menu2">Menu 2</a></li>
+                <li><a href="#menu3">Menu 3</a></li>
+                <li><a href="#menu4">Menu 4</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="menu1">
-        <form action="">
+    <section id="menu1" class="section menu1">
+        <form id="contato">
             <fieldset>
                 <legend>Preencha o formulário abaixo para entrar-mos em contato.</legend>
 
                 <label for="nome">Nome</label>
-                <input type="text" id="nome">
+                <input type="text" id="nome" name="nome">
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email">
 
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone">
+                <input type="tel" id="telefone" name="telefone">
 
                 <label for="mensagem">Mensagem</label>
-                <input type="text" id="mensagem">
+                <textarea name="mensagem" id="mensagem" rows="3"></textarea>
 
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" name="contato">
             </fieldset>
         </form>
     </section>
-    <section id="menu2">
+    <section id="menu2" class="section menu2">
         <div>
             <h2>Lorem ipsum dolor sit amet</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -73,7 +70,7 @@
             <img src="" alt="Homem em obra">
         </div>
     </section>
-    <section id="menu3">
+    <section id="menu3" class="section menu3">
         <h2>Lorem ipsum dolor sit amet</h2>
         <div>
             <img src="" alt="alvo">
@@ -91,7 +88,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
         </div>
     </section>
-    <section id="menu4">
+    <section id="menu4" class="section menu4">
         <h2>Lorem ipsum dolor sit amet</h2>
         <div>
             <h3>Lorem ipsum dolor sit amet?</h3>

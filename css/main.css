@@ -12,10 +12,42 @@
   --cor-principal: #7ca934;
   --cor-texto1: #4d4d4d;
   --cor-texto2: #166282;
+
+  --transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--poppins);
+  --nav-height: 6.5rem;
+  padding-top: var(--nav-height);
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: var(--nav-height);
+  width: 100vw;
+  --margin-side: 0 16px;
+
+  background-color: var(--cor-principal);
+
+  z-index: 900;
+  top: 0;
+  left: 0;
+  user-select: none;
+}
+
+.logo {
+  margin: var(--margin-side);
+  width: 10rem;
 }
 
 /* Botão menu mobile */
@@ -23,14 +55,16 @@ body {
 .mob-menu-toggle {
   background: transparent;
   border: none;
+  margin: var(--margin-side);
+  z-index: 1000;
 }
 
 .hamburger {
-  fill: #000;
+  fill: #fff;
 }
 
 .hamburger-line {
-  transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: var(--transition);
   transform-origin: center;
 }
 
@@ -45,4 +79,122 @@ body {
 }
 .mob-menu-toggle[aria-expanded="true"] .hamburger-bot {
   rotate: -45deg;
+}
+
+/* Nav buttons */
+
+.fixed {
+  overflow: hidden;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+
+  inset: 0 0 0 35%;
+  background-color: #235c43;
+  transform: translateX(100%);
+  transition: transform var(--transition);
+}
+
+.header-nav[data-visible="true"] {
+  transform: translateX(0%);
+}
+
+.header-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  list-style: none;
+  font-size: 2rem;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Sections */
+.section {
+  height: 90vh;
+}
+
+.menu1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../assets/fabrica.jpg");
+  background-size: cover;
+  --text-margin: ;
+}
+
+.menu1 form {
+  margin: 1.6rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 3rem 2.8rem;
+
+  height: 80%;
+}
+
+.menu1 fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  height: 100%;
+}
+
+.menu1 legend {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--cor-principal);
+  margin-bottom: 1.4rem;
+}
+
+.menu1 label {
+  color: #166282;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu1 input,
+.menu1 textarea {
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+  border: 1px solid #abbed1;
+  border-radius: 1.2rem;
+  padding: 0.8rem 1.2rem;
+  font-family: var(--poppins);
+}
+
+.menu1 :is(input:focus, input:hover, textarea:focus, textarea:hover) {
+  outline: 1px solid var(--cor-principal);
+}
+
+.menu1 textarea {
+  /* height: 7rem; */
+  resize: none;
+}
+
+.menu1 input[type="submit"] {
+  font-weight: 600;
+  background-color: var(--cor-principal);
+  border: none;
+  border-radius: 0.4rem;
+  color: #f5f7fa;
+  font-size: 1.6rem;
+}
+
+.menu1 input[type="submit"]:focus,
+.menu1 input[type="submit"]:hover {
+  border: none;
+  background-color: #235c43;
+}
+
+.menu2 {
 }
