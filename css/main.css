@@ -119,7 +119,6 @@ body {
 
 /* Sections */
 .section {
-  height: 90vh;
 }
 
 .section-title {
@@ -132,6 +131,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80vh;
 
   background-image: url("../assets/fabrica.jpg");
   background-size: cover;
@@ -143,7 +143,7 @@ body {
   border-radius: 2rem;
   padding: 3rem 2.8rem;
 
-  height: 80%;
+  /* height: 80%; */
 }
 
 .menu1 fieldset {
@@ -151,7 +151,7 @@ body {
   flex-direction: column;
   justify-content: center;
   border: none;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .menu1 legend {
@@ -314,6 +314,7 @@ body {
   max-height: 0;
   opacity: 0;
   transition: max-height ease-in-out 0.3s, opacity 0.3s;
+  z-index: -1;
 }
 
 .menu4 p {
