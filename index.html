@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./css/main.css">
 
+    <script src="./js/nav.js" defer></script>
     <title>SESI</title>
 </head>
 
@@ -14,7 +15,13 @@
     <header>
         <img src="" alt="Logo SESI">
 
-        <button><i>menuMob</i></button>
+        <button class="mob-menu-toggle" aria-expanded="false">
+            <svg class="hamburger" viewBox="0 0 100 100" width="250">
+                <rect class="hamburger-line hamburger-top" width="80" height="10" x="10" y="25" rx="5"></rect>
+                <rect class="hamburger-line hamburger-mid" width="80" height="10" x="10" y="45" rx="5"></rect>
+                <rect class="hamburger-line hamburger-bot" width="80" height="10" x="10" y="65" rx="5"></rect>
+            </svg>
+        </button>
 
         <nav>
             <ul>
@@ -35,10 +42,10 @@
                 <input type="text" id="nome">
 
                 <label for="email">E-mail</label>
-                <input type="text" id="email">
+                <input type="email" id="email">
 
                 <label for="telefone">Telefone</label>
-                <input type="text" id="telefone">
+                <input type="tel" id="telefone">
 
                 <label for="mensagem">Mensagem</label>
                 <input type="text" id="mensagem">

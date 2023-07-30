@@ -17,3 +17,32 @@
 body {
   font-family: var(--poppins);
 }
+
+/* Botão menu mobile */
+
+.mob-menu-toggle {
+  background: transparent;
+  border: none;
+}
+
+.hamburger {
+  fill: #000;
+}
+
+.hamburger-line {
+  transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform-origin: center;
+}
+
+.mob-menu-toggle[aria-expanded="true"] :is(.hamburger-top, .hamburger-bot) {
+  y: 45;
+}
+.mob-menu-toggle[aria-expanded="true"] .hamburger-top {
+  rotate: 45deg;
+}
+.mob-menu-toggle[aria-expanded="true"] .hamburger-mid {
+  opacity: 0;
+}
+.mob-menu-toggle[aria-expanded="true"] .hamburger-bot {
+  rotate: -45deg;
+}
