@@ -19,6 +19,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
@@ -334,6 +335,9 @@ body {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
   width: 100%;
   background-color: #235c43;
 }
@@ -350,6 +354,10 @@ body {
   height: var(--nav-height);
 }
 
+.footer .logo {
+  margin: 0;
+}
+
 .footer-direitos {
   font-size: 1.4rem;
   color: white;
@@ -364,6 +372,7 @@ body {
 
   body {
     --margin-side: 75px;
+    --nav-height: 9.5rem;
   }
 
   .mob-menu-toggle {
@@ -390,6 +399,10 @@ body {
 @media (min-width: 1024px) {
   body {
     --margin-side: 135px;
+  }
+
+  .logo {
+    width: 16rem;
   }
 
   .section-title {
@@ -456,5 +469,14 @@ body {
 
   .menu4 p {
     font-size: 1.6rem;
+  }
+
+  .footer-sesi {
+    height: 15rem;
+  }
+
+  .footer-direitos {
+    font-size: 1.6rem;
+    padding: 1rem 0;
   }
 }
