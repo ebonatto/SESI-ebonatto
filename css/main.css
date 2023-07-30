@@ -125,6 +125,10 @@ body {
 
 /* Sections */
 
+.anchor {
+  scroll-margin-top: var(--nav-height);
+}
+
 .section-title {
   font-size: 1.8rem;
   font-weight: 600;
