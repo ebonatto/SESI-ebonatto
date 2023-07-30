@@ -26,6 +26,12 @@ body {
   --nav-height: 6.5rem;
   padding-top: var(--nav-height);
   overflow-x: hidden;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
@@ -118,8 +124,6 @@ body {
 }
 
 /* Sections */
-.section {
-}
 
 .section-title {
   font-size: 1.8rem;
@@ -131,19 +135,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  min-height: 90vh;
+  width: 100%;
 
   background-image: url("../assets/fabrica.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .menu1 form {
   margin: 1.6rem;
   background-color: #fff;
   border-radius: 2rem;
-  padding: 3rem 2.8rem;
-
-  /* height: 80%; */
+  padding: 2.2rem 2.8rem;
+  max-width: 47rem;
 }
 
 .menu1 fieldset {
@@ -151,7 +156,6 @@ body {
   flex-direction: column;
   justify-content: center;
   border: none;
-  /* height: 100%; */
 }
 
 .menu1 legend {
@@ -190,6 +194,7 @@ body {
   border-radius: 0.4rem;
   color: #f5f7fa;
   font-size: 1.6rem;
+  margin-bottom: 0.4rem;
 }
 
 .menu1 input[type="submit"]:focus,
@@ -222,6 +227,8 @@ body {
 }
 
 .menu2-img {
+  display: flex;
+  align-items: center;
   width: 100%;
 }
 
@@ -248,8 +255,12 @@ body {
   flex-direction: column;
   padding: 3.2rem;
   gap: 1.6rem;
+}
 
-  height: auto;
+.menu3-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
 .menu3-card h3 {
@@ -313,13 +324,13 @@ body {
 .menu4 p[data-visible="false"] {
   max-height: 0;
   opacity: 0;
-  transition: max-height ease-in-out 0.3s, opacity 0.3s;
+  transition: max-height ease-in-out 0.3s, opacity ease-in-out 0.5s;
   z-index: -1;
 }
 
 .menu4 p {
   max-height: 100vh;
-  transition: max-height ease-in-out 0.3s, opacity 0.3s;
+  transition: max-height ease-in-out 0.3s, opacity ease-in-out 0.5s;
   font-size: 1.4rem;
 }
 
@@ -345,4 +356,79 @@ body {
   color: white;
   background-color: #4d4d4d;
   padding: 0.8rem 0;
+}
+
+@media (min-width: 700px) {
+  .menu2,
+  .menu3 {
+    max-width: 55rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .menu1 {
+    min-height: auto;
+    justify-content: end;
+  }
+
+  .menu1 form {
+    margin: 2rem 3rem 3rem 0;
+  }
+
+  .menu1 label {
+    font-size: 1.8rem;
+  }
+
+  .menu1 input,
+  .menu1 textarea {
+    font-size: 1.8rem;
+  }
+
+  .menu1 input[type="submit"] {
+    font-size: 1.8rem;
+  }
+
+  .menu2,
+  .menu3,
+  .menu4 {
+    max-width: 117rem;
+  }
+
+  .menu2 {
+    flex-direction: row;
+  }
+
+  .menu2-texto {
+    max-width: 60rem;
+  }
+
+  .menu3-cards {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .menu3-card img,
+  .menu3-card p {
+    margin-bottom: 1.6rem;
+  }
+
+  .menu3-card h3 {
+    font-size: 2.4rem;
+  }
+
+  .menu3-card p {
+    font-size: 1.6rem;
+  }
+
+  .menu4-card-title h3 {
+    font-size: 2.4rem;
+  }
+
+  .menu4 p {
+    font-size: 1.6rem;
+  }
 }
