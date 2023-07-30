@@ -23,6 +23,7 @@ html {
 
 body {
   font-family: var(--poppins);
+  --margin-side: 16px;
   --nav-height: 6.5rem;
   padding-top: var(--nav-height);
   overflow-x: hidden;
@@ -41,8 +42,6 @@ body {
   position: fixed;
   height: var(--nav-height);
   width: 100vw;
-  --margin-side: 0 16px;
-
   background-color: var(--cor-principal);
 
   z-index: 900;
@@ -52,7 +51,7 @@ body {
 }
 
 .logo {
-  margin: var(--margin-side);
+  margin-left: var(--margin-side);
   width: 10rem;
 }
 
@@ -359,6 +358,29 @@ body {
 }
 
 @media (min-width: 700px) {
+  .fixed {
+    overflow: scroll;
+  }
+
+  body {
+    --margin-side: 75px;
+  }
+
+  .mob-menu-toggle {
+    display: none;
+  }
+
+  .header-nav {
+    position: static;
+    transform: translateX(0%);
+    background-color: transparent;
+    margin-right: var(--margin-side);
+  }
+
+  .header-nav ul {
+    flex-direction: row;
+  }
+
   .menu2,
   .menu3 {
     max-width: 55rem;
@@ -366,6 +388,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+  body {
+    --margin-side: 135px;
+  }
+
   .section-title {
     font-size: 2.4rem;
   }
@@ -376,7 +402,7 @@ body {
   }
 
   .menu1 form {
-    margin: 2rem 3rem 3rem 0;
+    margin: 2rem var(--margin-side) 3rem 0;
   }
 
   .menu1 label {
