@@ -195,6 +195,7 @@ body {
   color: #f5f7fa;
   font-size: 1.6rem;
   margin-bottom: 0.4rem;
+  margin-top: 1.4rem;
 }
 
 .menu1 input[type="submit"]:focus,
@@ -394,11 +395,20 @@ body {
   .menu3 {
     max-width: 55rem;
   }
+
+  .menu2-img img {
+    border-radius: 0.8rem;
+  }
+
+  .card {
+    border-radius: 1.2rem;
+  }
 }
 
 @media (min-width: 1024px) {
   body {
     --margin-side: 135px;
+    gap: 5rem;
   }
 
   .logo {
@@ -416,6 +426,7 @@ body {
 
   .menu1 form {
     margin: 2rem var(--margin-side) 3rem 0;
+    padding: 3rem 3.5rem;
   }
 
   .menu1 label {
@@ -425,6 +436,7 @@ body {
   .menu1 input,
   .menu1 textarea {
     font-size: 1.8rem;
+    padding: 1.4rem 2rem;
   }
 
   .menu1 input[type="submit"] {
