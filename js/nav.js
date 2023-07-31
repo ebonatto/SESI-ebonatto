@@ -6,23 +6,15 @@ const nav = document.querySelector(".header-nav");
 const navToggle = document.querySelector(".mob-menu-toggle");
 const navButtons = document.querySelectorAll(".header-nav li");
 
-window.addEventListener("scroll", () => {
-  if (lastScrollY < window.scrollY) {
-    header.classList.add("nav--hidden");
-  } else {
-    header.classList.remove("nav--hidden");
-  }
+// Mostra/Esconde o menu quando o botão do menu é clicado
+navToggle.addEventListener("click", () => toggleNav());
 
-  lastScrollY = window.scrollY;
-});
-
-navToggle.addEventListener("click", () => hideNav());
-
+// Esconde o menu quando o algum link ancora do menu é clicado
 navButtons.forEach((button) => {
-  button.addEventListener("click", () => hideNav());
+  button.addEventListener("click", () => toggleNav());
 });
 
-function hideNav() {
+function toggleNav() {
   let visibility = nav.getAttribute("data-visible");
 
   if (visibility == "true") {
