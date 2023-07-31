@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="./js/nav.js" defer></script>
     <script src="./js/cardExpand.js" defer></script>
+    <script src="./js/formataTel.js" defer></script>
     <title>SESI</title>
 </head>
 
@@ -43,7 +44,7 @@
                 <input type="email" id="email" name="email">
 
                 <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" name="telefone">
+                <input type="tel" id="telefone" onInput="this.value = formataTel(this.value)" />
 
                 <label for="mensagem">Mensagem</label>
                 <textarea name="mensagem" id="mensagem" rows="3"></textarea>
