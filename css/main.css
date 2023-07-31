@@ -200,6 +200,8 @@ body {
   font-size: 1.6rem;
   margin-bottom: 0.4rem;
   margin-top: 1.4rem;
+
+  transition: var(--transition);
 }
 
 .menu1 input[type="submit"]:focus,
@@ -393,6 +395,7 @@ body {
 
   .header-nav ul {
     flex-direction: row;
+    gap: 5.5rem;
   }
 
   .menu2,
