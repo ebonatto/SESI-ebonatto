@@ -292,6 +292,7 @@ body {
   transition: 1s;
   max-height: auto;
   transition: max-height 1s;
+  cursor: pointer;
 }
 
 .menu4-card-title {
@@ -329,15 +330,18 @@ body {
 }
 
 .menu4 p[data-visible="false"] {
-  max-height: 0;
   opacity: 0;
-  transition: max-height ease-in-out 0.3s, opacity ease-in-out 0.5s;
+  max-height: 0;
+  /* Animação fechamento do card */
+  transition: max-height ease 0.4s, opacity ease-in 0.3s;
   z-index: -1;
 }
 
 .menu4 p {
   max-height: 100vh;
-  transition: max-height ease-in-out 0.3s, opacity ease-in-out 0.5s;
+  opacity: 100;
+  /* Animação abertura do card */
+  transition: max-height ease-in-out 0.3s, opacity ease-in-out 0.3s;
   font-size: 1.4rem;
 }
 
