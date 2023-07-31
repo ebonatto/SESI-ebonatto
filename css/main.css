@@ -231,6 +231,7 @@ body {
 
 .menu2-texto ul {
   padding-left: 2rem;
+  line-height: 2.7rem;
 }
 
 .menu2-img {
@@ -467,6 +468,11 @@ body {
 
   .menu2-texto {
     max-width: 60rem;
+  }
+
+  .menu2-texto p,
+  .menu2-texto ul {
+    font-size: 1.6rem;
   }
 
   .menu3-cards {
